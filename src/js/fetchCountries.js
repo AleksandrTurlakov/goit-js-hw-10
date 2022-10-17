@@ -5,8 +5,8 @@ export function fetchCountries(name) {
   return fetch(
     `${BASE_URL}${ENDPOINT}${name}?fields=name,capital,population,flags,languages`
   ).then(response => {
-    if (!response.ok) {
-      throw new Error('Оооошиииибббкааа');
+    if (!response.ok && evt.target.value.trim() !== '') {
+      throw new Error('Fail');
     }
     return response.json();
   });
