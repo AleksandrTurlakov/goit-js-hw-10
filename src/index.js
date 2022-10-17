@@ -15,9 +15,8 @@ function onInput(evt) {
   fetchCountries(name)
     .then(showCountries)
     .catch(err => console.log('Ошибка какой кошмар'));
-  // .then(data.json);
 }
 
 function showCountries(data) {
-  console.log(markup(data.map(country)));
+  console.log(markup(data));
 }
